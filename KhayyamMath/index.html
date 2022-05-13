@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>مسابقه ریاضی خیام</title>
+<style>
+
+td{
+    font-weight: normal;
+	font-size: 150%;
+	align-items: center;
+	text-align: center; 
+	padding: 15px;
+}
+font-size: 150%;
+</style>
+</head>
+
+<body>
+	
+	<center> 
+	<h1> سوالات مسابقه ریاضی خیام </h1>
+	<br> <hr style="width:50%"> <br> <br>
+	
+	<br> <br> <br> 
+	
+	<h2> زمان باقی مانده تا باز شدن دسترسی به سوالات </h2>
+	<br> 
+			<!-- Display the countdown timer in an element -->
+	<p id="demo" style="font-size: 30px"></p>
+	<h1>
+	<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("May 14, 2022 8:40:00").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+	  // Get today's date and time
+	  var now = new Date().getTime();
+
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	  // Display the result in the element with id="demo"
+	  document.getElementById("demo").innerHTML =  hours + "h "
+	  + minutes + "m " + seconds + "s ";
+
+	  // If the count down is finished, write some text
+	  if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("demo").innerHTML = "EXPIRED";
+	  }
+	}, 1000);
+		</script></h1>
+	</center>
+</body>
+</html>
